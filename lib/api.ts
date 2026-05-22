@@ -18,7 +18,8 @@ export async function getProfile(): Promise<Profile | null> {
 }
 
 export async function getPosts(): Promise<PostListItem[]> {
-  return fetchAPI<PostListItem[]>(`/api/public/posts/${USERNAME}`) ?? [];
+  const result = await fetchAPI<PostListItem[]>(`/api/public/posts/${USERNAME}`);
+  return result ?? [];
 }
 
 export async function getPost(postId: string): Promise<Post | null> {
