@@ -27,7 +27,7 @@ export function HomeClient({ displayName, avatarUrl, posts }: HomeClientProps) {
               "https://images.unsplash.com/photo-1665251117419-31b511ce2be3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwcG9ydHJhaXQlMjBib3l8ZW58MXx8fHwxNzc5NDE3MzI5fDA&ixlib=rb-4.1.0&q=80&w=1080"
             }
             alt={displayName}
-            className="relative w-24 h-24 rounded-full object-cover grayscale border border-neutral-200/50 shadow-sm"
+            className="relative w-24 h-24 rounded-full object-cover border border-neutral-200/50 shadow-sm"
           />
         </div>
         <h1 className="text-3xl font-bold font-serif tracking-tight text-neutral-900">
