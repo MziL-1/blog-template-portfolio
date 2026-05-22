@@ -1,10 +1,16 @@
 import { notFound } from "next/navigation";
 import { getPost } from "@/lib/api";
+import { getPosts } from "@/lib/api";
 import ReactMarkdown from "react-markdown";
 import type { Metadata } from "next";
 
 interface Props {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ slug: post.id }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
