@@ -1,5 +1,7 @@
 import { getProfile, getPosts } from "@/lib/api";
 
+export const dynamic = "force-static";
+
 const BLOG_API_URL = process.env.NEXT_PUBLIC_BLOG_API_URL || "";
 
 export async function GET() {
